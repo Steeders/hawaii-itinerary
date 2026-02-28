@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maui Family Itinerary – March 4–11, 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Georgia', serif; background: #f5f0e8; color: #2c2c2c; padding: 16px; max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #1a6b5a, #2e9e7e); color: white; padding: 28px 20px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
+.header h1 { font-size: 1.8em; margin-bottom: 8px; }
+.header p { font-size: 0.95em; opacity: 0.9; }
+.header .dates { font-size: 1em; margin-top: 10px; font-weight: bold; opacity: 0.95; }
+@media (max-width: 480px) {
+  body { padding: 10px; }
+  .header { padding: 20px 14px; border-radius: 8px; }
+  .header h1 { font-size: 1.4em; }
+  .header p { font-size: 0.88em; }
+  .header .dates { font-size: 0.9em; }
+}
+.alert-box { background: #fff3cd; border-left: 5px solid #f0a500; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; }
+.alert-box.red { background: #fde8e8; border-left-color: #c0392b; }
+.alert-box.green { background: #e8f8f1; border-left-color: #27ae60; }
+.alert-box h3 { margin-bottom: 8px; font-size: 1.05em; }
+.alert-box ul { padding-left: 18px; }
+.alert-box li { margin-bottom: 4px; line-height: 1.5; }
+.section-title { font-size: 1.35em; color: #1a6b5a; border-bottom: 2px solid #2e9e7e; padding-bottom: 6px; margin: 28px 0 14px; }
+@media (max-width: 480px) {
+  .section-title { font-size: 1.15em; margin: 20px 0 12px; }
+}
+.day-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-top: 4px solid #2e9e7e; }
+@media (max-width: 480px) {
+  .day-card { padding: 14px 12px; border-radius: 8px; }
+}
+.day-card.arrival { border-top-color: #7f8c8d; }
+.day-card.beach { border-top-color: #3498db; }
+.day-card.hana { border-top-color: #27ae60; }
+.day-card.adventure { border-top-color: #e67e22; }
+.day-card.luau { border-top-color: #8e44ad; }
+.day-card.sunday { border-top-color: #e74c3c; }
+.day-card.hike { border-top-color: #16a085; }
+.day-card.whales { border-top-color: #2980b9; }
+.day-card.lastday { border-top-color: #c0392b; }
+.day-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
+.day-title { font-size: 1.15em; font-weight: bold; color: #1a1a1a; }
+.day-date { font-size: 0.9em; color: #666; font-style: italic; }
+.day-theme { font-size: 0.82em; background: #2e9e7e; color: white; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+@media (max-width: 480px) {
+  .day-title { font-size: 1.05em; }
+  .day-theme { font-size: 0.75em; padding: 2px 8px; }
+}
+.time-block { margin-bottom: 14px; }
+.time-label { font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 4px; }
+.activity { font-size: 0.97em; line-height: 1.7; }
+.activity strong { color: #1a6b5a; }
+.tip { background: #f0f7f5; border-left: 3px solid #2e9e7e; padding: 8px 14px; margin-top: 10px; font-size: 0.9em; border-radius: 0 6px 6px 0; line-height: 1.5; }
+.tip em { color: #555; }
+.tag { display: inline-block; font-size: 0.78em; padding: 2px 8px; border-radius: 12px; margin-right: 5px; font-weight: bold; }
+.tag.free { background: #e8f8f1; color: #27ae60; }
+.tag.paid { background: #fde8e8; color: #c0392b; }
+.tag.food { background: #fef9e7; color: #f39c12; }
+.tag.book { background: #fde8e8; color: #c0392b; border: 1px solid #c0392b; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 16px; border-radius: 8px; }
+.table-scroll table { min-width: 480px; margin-bottom: 0; }
+.luau-box { background: #f9f3ff; border: 2px solid #8e44ad; border-radius: 10px; padding: 18px 16px; margin-bottom: 22px; }
+.luau-box h3 { color: #8e44ad; margin-bottom: 12px; font-size: 1.1em; }
+@media (max-width: 480px) {
+  .luau-box { padding: 14px 12px; }
+}
+.luau-option { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e0d0f0; }
+.luau-option:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.luau-option h4 { color: #2c2c2c; margin-bottom: 6px; }
+.luau-option .price { font-weight: bold; color: #c0392b; }
+.luau-option .verdict { font-style: italic; color: #555; margin-top: 4px; font-size: 0.9em; }
+.swell-box { background: #fff8e1; border: 2px solid #f39c12; border-radius: 10px; padding: 16px 14px; margin-bottom: 22px; }
+.swell-box h3 { color: #e67e22; margin-bottom: 10px; font-size: 1.05em; }
+@media (max-width: 480px) {
+  .swell-box { padding: 12px 10px; }
+  .swell-box h3 { font-size: 0.97em; }
+}
+.beach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+@media (max-width: 600px) {
+  .beach-grid { grid-template-columns: 1fr; }
+}
+.beach-card { background: #f8fcff; border: 1px solid #d6eaf8; border-radius: 8px; padding: 12px; }
+.beach-card h4 { color: #2980b9; margin-bottom: 6px; font-size: 0.95em; }
+.beach-card p { font-size: 0.88em; line-height: 1.5; color: #444; }
+.eats-section { background: #fffbf0; border-radius: 10px; padding: 20px; margin-top: 20px; }
+.eats-section h3 { color: #d35400; margin-bottom: 14px; font-size: 1.1em; }
+.eats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 600px) {
+  .eats-grid { grid-template-columns: 1fr; }
+}
+.eat-item { font-size: 0.9em; }
+.eat-item strong { color: #d35400; }
+/* Mobile table scroll for inline luau/swell tables */
+@media (max-width: 540px) {
+  .luau-option table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
+}
+.booking-box { background: #fdecea; border: 2px solid #c0392b; border-radius: 10px; padding: 18px 14px; margin-bottom: 22px; }
+.booking-box h3 { color: #c0392b; margin-bottom: 10px; }
+.booking-box ol { padding-left: 18px; }
+.booking-box li { margin-bottom: 8px; line-height: 1.6; font-size: 0.92em; }
+@media (max-width: 480px) {
+  .booking-box { padding: 14px 10px; }
+  .booking-box li { font-size: 0.88em; }
+}
+.footer { text-align: center; font-size: 0.85em; color: #888; padding: 20px 0; border-top: 1px solid #ddd; margin-top: 30px; }
+hr { border: none; border-top: 1px solid #e0e0e0; margin: 6px 0 14px; }
+.emoji { margin-right: 5px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🌺 Maui Family Itinerary</h1>
+  <p>The Steed Family + Crew &bull; First Time in Hawaii!</p>
+  <div class="dates">March 4–11, 2026 &bull; 8 People &bull; West Maui</div>
+  <p style="margin-top:10px; font-size:0.9em; opacity:0.85;">4 adults &bull; Kids: 9, 7, 4, 18 months</p>
+</div>
+
+<!-- BOOK NOW BOX -->
+<div class="booking-box">
+  <h3>🚨 Book These This Week — Before You Leave!</h3>
+  <ol>
+    <li><strong>Afternoon Snorkel Tour (Turtles!)</strong> — Four Winds II afternoon session, <strong>1:00–5:00 PM on Thursday March 5</strong>. Coral Gardens + Turtle Town. Book at <a href="https://www.fourwindsmaui.com" target="_blank">fourwindsmaui.com</a> ($124.32/adult, $86.49/ages 4–12, +$42 fuel surcharge, promo code <strong>SAVENOW</strong>). Full group $798.75 pre-tax. ✅ <em>Decided: afternoon session, Thursday March 5.</em></li>
+    <li><strong>Drums of the Pacific Luau</strong> — <strong>Friday March 6</strong> evening. Book directly at <a href="https://drumsofthepacificmaui.com" target="_blank">drumsofthepacificmaui.com</a>. $201.60/adult, $100.80/ages 4–12, under 4 free. Your family: <strong>$781.19 all-in</strong>. ✅ <em>Decided: Drums of the Pacific.</em></li>
+    <li><strong>Whale Watching</strong> — March is peak season! Check <a href="https://pacwhale.com" target="_blank">PacWhale Eco-Adventures</a> or <a href="https://mauiwhaleadventures.com" target="_blank">Maui Whale Adventures</a> (launches right from Ka'anapali Beach — no harbor drive needed).</li>
+    <li><strong>ʻĪao Valley Parking</strong> — Requires an online reservation ($10 parking, $5/person). Book at <a href="https://gostateparks.hawaii.gov" target="_blank">gostateparks.hawaii.gov</a>.</li>
+    <li><strong>Waiʻānapanapa (Black Sand Beach)</strong> — If doing Road to Hana, this requires advance online reservation. May be hard to get with one week's notice — check availability ASAP at <a href="https://dlnr.hawaii.gov/dsp/parks/maui/waianapanapa-state-wayside/" target="_blank">dlnr.hawaii.gov</a>. If unavailable, skip it and enjoy the other Hana stops.</li>
+  </ol>
+</div>
+
+<!-- WINTER SWELLS WARNING -->
+<div class="swell-box">
+  <h3>⚠️ Winter Swells: Know Before You Go (March Conditions)</h3>
+  <p style="margin-bottom:10px; font-size:0.95em; line-height:1.6;">March is the tail end of Maui's winter swell season. North and northwest-facing beaches can have powerful surf — beautiful to watch, but dangerous to swim. Your friends already warned you about Olivine Pools and Mermaid Pools — those are off the table. Here's the cheat sheet:</p>
+  <div class="beach-grid">
+    <div class="beach-card" style="border-color:#c0392b; background:#fef9f9;">
+      <h4>🚫 Avoid / Use Caution</h4>
+      <p>
+        <strong>Olivine Pools</strong> — Skip in winter (friends confirmed)<br>
+        <strong>Mermaid Pools</strong> — Skip in winter (friends confirmed)<br>
+        <strong>Honolua Bay</strong> — Check conditions day-of; can be surf break in winter<br>
+        <strong>North Shore beaches</strong> — Big swells, spectate only<br>
+        <strong>Slaughterhouse Beach</strong> — Beautiful but steep staircase + winter swell = extra caution with littles
+      </p>
+    </div>
+    <div class="beach-card" style="border-color:#27ae60; background:#f9fef9;">
+      <h4>✅ Safe & Family-Friendly in Winter</h4>
+      <p>
+        <strong>Launiupoko Beach Park</strong> — Protected wading pool, perfect for baby &amp; toddler<br>
+        <strong>Ka'anapali Beach</strong> — Sheltered, huge beach, all ages<br>
+        <strong>Kapalua Bay</strong> — Calm, reef-protected, best winter snorkeling<br>
+        <strong>DT Flemings</strong> — Fun body surf, but check swell first<br>
+        <strong>Black Rock (Ka'anapali)</strong> — Snorkeling + mild cliff jumping, family favorite
+      </p>
+    </div>
+  </div>
+  <div class="tip" style="margin-top:12px;">
+    <em>💡 Pro tip: Check <a href="https://safebeachday.com/county/maui/" target="_blank">safebeachday.com/county/maui</a> each morning before heading out. Ocean conditions can flip overnight.</em>
+  </div>
+</div>
+
+<!-- DAILY ITINERARY -->
+<div class="section-title">📅 Daily Itinerary</div>
+
+<!-- DAY 1 -->
+<div class="day-card arrival">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 1 — Arrival Day</div>
+      <div class="day-date">Wednesday, March 4</div>
+    </div>
+    <div class="day-theme" style="background:#7f8c8d;">✈️ Travel Day</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Flight Schedule</div>
+    <div class="activity">
+      SLC → PHX (12:15 PM – 2:10 PM), then PHX → OGG (3:40 PM – 7:23 PM).<br>
+      You land in Kahului (OGG) around <strong>7:23 PM</strong>. It's a 45-minute drive to Ka'anapali.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Evening</div>
+    <div class="activity">
+      <strong>🛒 Costco Maui</strong> — Closes at 8:30 PM. If you hustle from the airport you can make it (105 Ho'okele St, Kahului). Stock up on snacks, sunscreen, and groceries for the week. Massive savings vs. local stores. <span class="tag free">Smart Move</span><br><br>
+      <strong>Drive to rental</strong> — Settle in, unpack, let the kids run wild. Order pizza or grab groceries for a simple dinner.<br>
+    </div>
+  </div>
+  <div class="tip"><em>Tonight is about surviving travel with 5 kids. Don't plan anything. Get to bed. Hawaii is ready for you tomorrow.</em></div>
+</div>
+
+<!-- DAY 2 -->
+<div class="day-card beach">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 2 — Beach + Snorkel with Turtles</div>
+      <div class="day-date">Thursday, March 5</div>
+    </div>
+    <div class="day-theme" style="background:#3498db;">🏖️ Beach + 🐢 Snorkel</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Morning</div>
+    <div class="activity">
+      <strong>Launiupoko Beach Park</strong> <span class="tag free">Free</span> <em style="font-size:0.85em; color:#888;">~10 min south of Ka'anapali on Hwy 30</em><br>
+      Protected wading lagoon — perfect for the baby and 4-year-old, while the 7 and 9-year-olds boogie board the gentle breaks. Restrooms, showers, picnic tables, shade trees. <strong>Whales visible from shore</strong> in March. Easy, relaxed morning — save energy for the afternoon water adventure.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Afternoon — Depart 12:15 PM</div>
+    <div class="activity">
+      <strong>Afternoon Snorkel Tour — Coral Gardens + Turtle Town</strong> <span class="tag paid">Book in advance!</span> <em style="font-size:0.85em; color:#888;">Departs Ma'alaea Harbor ~25–30 min south of Ka'anapali — leave by 12:15 PM</em><br><br>
+      Tour runs <strong>1:00 PM – 5:00 PM</strong>. Instead of Molokini, the afternoon trip heads to <strong>Coral Gardens</strong> and <strong>Turtle Town</strong> — where swimming alongside Hawaiian green sea turtles is basically guaranteed. Less crowded than the morning rush, great afternoon light on the water.<br><br>
+      <strong><a href="https://www.fourwindsmaui.com" target="_blank">Four Winds II</a></strong> — same family-friendly setup: crew in the water with you, glass-bottom boat viewing, water slide for the kids on the way home.<br><br>
+      <strong>Cost (confirmed from booking):</strong> Adults $124.32, Kids 4–12 $86.49, under 4 free &nbsp;|&nbsp; +$42 fuel surcharge &nbsp;|&nbsp; Promo code <strong>SAVENOW</strong> applied at checkout<br>
+      Full group of 8 (4 adults + 3 kids + 1 infant): <strong>$798.75 pre-tax</strong>. Family only (2 adults + 3 kids + infant): ~$525 pre-tax.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Evening — Dinner</div>
+    <div class="activity">
+      Back by 5 PM — everyone's salty, sun-kissed, and starving. Keep it easy.<br><br>
+      <strong>🍜 Star Noodle</strong> — Asian family-style dining on the Lahaina waterfront. One of the best meals on the island. <span class="tag food">Friends' Pick</span><br>
+      — OR —<br>
+      <strong>🍹 Aloha Mixed Plate</strong> — Casual, waterfront, great local Hawaiian food. Easy on the wallet and great for the kids.
+    </div>
+  </div>
+  <div class="tip"><em>💡 Lahaina tip: After dinner, take a quick walk to the Banyan Tree (largest in the U.S.) and along Front Street — a great intro to historic Lahaina without needing a dedicated half-day for it.</em></div>
+</div>
+
+<!-- DAY 3 -->
+<div class="day-card luau">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 3 — Beach Day + Luau Night</div>
+      <div class="day-date">Friday, March 6</div>
+    </div>
+    <div class="day-theme" style="background:#8e44ad;">🏖️ Relax + 🌺 Luau</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Morning</div>
+    <div class="activity">
+      <strong>Ka'anapali Beach</strong> <span class="tag free">Free</span><br>
+      No agenda — just beach. Build sandcastles, splash in the waves, let the 18-month-old eat some sand. Ka'anapali is one of the best beaches in the world and it's right outside your door. This is the day you actually just enjoy being in Hawaii.
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-label">Mid-Morning (Optional)</div>
+    <div class="activity">
+      <strong>Dragon's Teeth</strong> <span class="tag free">Free</span> <em style="font-size:0.85em; color:#888;">~15 min north of Ka'anapali</em><br>
+      A short walk from the Kapalua parking area takes you to jagged black lava formations right at the ocean's edge — dramatic, otherworldly, and great for photos. Not the same as Mermaid or Olivine Pools (which are off-limits in winter) — Dragon's Teeth is a safe coastal walk. Allow 30–45 minutes.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Afternoon</div>
+    <div class="activity">
+      Rest, pool, naps. Everyone needs to arrive at the luau fed but not stuffed, rested, and in good spirits — especially the little ones. Eat a very light lunch.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Evening — 🥁 Drums of the Pacific Luau</div>
+    <div class="activity">
+      <strong>Drums of the Pacific at Hyatt Regency Ka'anapali</strong> — <em>walkable from most Ka'anapali rentals.</em><br><br>
+      Check-in ~5:00 PM. Pre-show: lei greeting, coconut weaving, Hawaiian games for the kids. <strong>During the show, kids are invited on stage to learn hula</strong> — your 9 and 7-year-olds will absolutely get up there, and it'll be the highlight of their trip. Polynesian feast buffet (better adult food than any other Ka'anapali luau), table service drinks, three-person fire knife grand finale.<br><br>
+      <strong>Cost (your family — confirmed from booking):</strong><br>
+      2 adults × $201.60 = $403.20 &nbsp;|&nbsp; 3 kids (9, 7, &amp; 4) × $100.80 = $302.40 &nbsp;|&nbsp; 18-month-old FREE<br>
+      Subtotal $705.60 + tax $33.25 + fees $42.34 = <strong>$781.19 all-in</strong><br>
+      <em style="font-size:0.88em; color:#c0392b;">⚠️ Drums charges ages 4–12, so your 4-year-old is a paid ticket. Only under-4 is free.</em>
+    </div>
+  </div>
+  <div class="tip"><em>💡 Luau tip: Don't eat a big lunch. Come hungry. The food is part of the experience. Drums is 2 minutes from your rental — no driving exhausted kids home after fire knives and hula. Perfect end to a perfect day.</em></div>
+</div>
+
+<!-- DAY 4 -->
+<div class="day-card hana">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 4 — Road to Hana</div>
+      <div class="day-date">Saturday, March 7</div>
+    </div>
+    <div class="day-theme" style="background:#27ae60;">🌿 Road to Hana</div>
+  </div>
+  
+  <div class="activity" style="margin-bottom:14px;">
+    ⚠️ <strong>Read this before deciding:</strong> Road to Hana is 54 miles, 600+ curves, 50+ bridges. With an 18-month-old and a 4-year-old, it's a big day. Two options below — choose your adventure:<br><br>
+    <em style="font-size:0.88em; color:#888;">🚗 <strong>Drive context:</strong> Ka'anapali → Twin Falls (first stop) = ~55 min. Full drive to Hana town from Ka'anapali = ~3 hrs straight. Budget 10–12 hours total for the full version including stops. That's why the 6:30 AM start is non-negotiable.</em><br><br>
+    <em style="font-size:0.88em; color:#888;">🌧️ <strong>Weather note:</strong> Rain on the Road to Hana is actually a feature, not a bug — waterfalls are fuller and the jungle is more lush. Pack light rain gear for the kids and embrace it.</em>
+  </div>
+  
+  <hr>
+  
+  <div class="time-block">
+    <div class="time-label">🅰️ Option A — Full Road to Hana (Start 6:30 AM)</div>
+    <div class="activity">
+      <strong>Pack Dramamine the night before</strong> (seriously — those curves are winding). Download the <a href="https://www.shakaguide.com" target="_blank">Shaka Guide app</a> for offline GPS narration. Pack all food for the day — there are limited stops.<br><br>
+      <strong>Recommended stops (Wai'ānapanapa-first strategy):</strong><br>
+      1. <strong>Twin Falls</strong> (Mile Marker ~2) — Easy 15-min walk, beautiful waterfall &amp; swimming hole, kids love it. Your friends' fav spot is the <em>second</em> waterfall. <span class="tag free">Free</span><br>
+      2. <strong>Rainbow Eucalyptus Trees</strong> (MM ~7) — Roadside, 2-min stop, kids go nuts for the colorful bark. <span class="tag free">Free</span><br>
+      3. <strong>Aunty Sandy's Banana Bread</strong> (MM ~17) — Famous half-way stop. Get the banana bread. Don't argue with us on this. <span class="tag food">~$5</span><br>
+      4. <strong>Wai'ānapanapa State Park</strong> — Black sand beach. Sea caves, blowhole, wild coastline. Otherworldly. Book your <strong>Saturday reservation</strong> at <a href="https://dlnr.hawaii.gov/dsp/parks/maui/waianapanapa-state-wayside/" target="_blank">dlnr.hawaii.gov</a> — 10 AM–12:30 PM slot. <span class="tag paid">$5/person + $10 parking</span><br>
+      5. <strong>Hana Town</strong> — Lunch, stretch, let the kids loose. Food trucks with great local food. <span class="tag food">~$</span><br>
+      6. <strong>Three Bears Falls (Upper Waikani)</strong> — Three waterfalls side-by-side, visible from road. Stop on the way back. <span class="tag free">Free</span><br>
+      7. <strong>Ke'anae Peninsula</strong> — Lava rock coastline lookout. Also on the way back. <span class="tag free">Free</span>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="time-block">
+    <div class="time-label">🅱️ Option B — Hana Lite (More Chill, Back by Noon)</div>
+    <div class="activity">
+      Leave by 8 AM. Drive to Twin Falls (your friends' waterfall rec) + 13 Crossings hike (see Monday for details), then turn back and enjoy the afternoon at the beach or pool. Less epic, but the baby and 4-year-old won't be losing their minds.
+    </div>
+  </div>
+  <div class="tip"><em>💡 If you go full Hana: leave by 6:30 AM, pack tons of snacks, download the Shaka Guide app, and expect to get home around 5 PM. Save Ke'anae Peninsula and Three Bears Falls for the drive back — this gets you to Wai'ānapanapa earlier and gives you a full 2+ hours there. Rain makes the waterfalls better — embrace it.</em></div>
+</div>
+
+<!-- DAY 5 -->
+<div class="day-card sunday">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 5 — Church + Friends Day</div>
+      <div class="day-date">Sunday, March 8</div>
+    </div>
+    <div class="day-theme" style="background:#e74c3c;">⛪ Sabbath + Aloha</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Morning</div>
+    <div class="activity">
+      Church — find your local congregation and soak in what it's like to worship in Maui. Probably a very unique experience.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Afternoon + Evening</div>
+    <div class="activity">
+      <strong>Friends Day!</strong> Time with your Maui crew. Based on what they've sent:<br><br>
+      <strong>Cliff House</strong> — Their favorite snorkeling and cliff-jumping spot. Parking is about a 10-minute walk from the water. Cliffs at various heights (something for the brave 9-year-olds and the "I'll watch from here" crowd). Bring snorkel gear. <span class="tag free">Free</span><br><br>
+      Let your friends lead the way today — they know the island best. Enjoy the downtime, let the kids play, and don't over-schedule this one.
+    </div>
+  </div>
+  <div class="tip"><em>💡 Sunday is also a great day to share Papis Ohana cinnamon rolls with your friends (open 7 AM – 2 PM, closed Sundays... wait — check this! Friends mentioned it's closed Sundays, so save that for another morning).</em></div>
+</div>
+
+<!-- DAY 6 -->
+<div class="day-card hike">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 6 — West Maui Explorer + Family Photos</div>
+      <div class="day-date">Monday, March 9</div>
+    </div>
+    <div class="day-theme" style="background:#16a085;">🥾 Hikes + 📸 Photos</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Morning</div>
+    <div class="activity">
+      <strong>🍩 Papis Ohana</strong> — Enormous homemade cinnamon rolls. Open 7 AM – 2 PM, closed Sundays and Wednesdays. Get there early (before 9 AM) to beat the line. Worth every calorie. <span class="tag food">Friends' Pick</span>
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Mid-Morning</div>
+    <div class="activity">
+      <strong>ʻĪao Valley State Monument</strong> <span class="tag paid">$5/person + $10 parking</span> <em style="font-size:0.85em; color:#888;">~25 min from Ka'anapali</em><br>
+      Pre-book your parking reservation online. 0.6-mile paved loop trail, completely doable with the 18-month-old in a carrier. The iconic Iao Needle rising 1,200 feet out of the jungle valley is one of Maui's most dramatic sights. Allow 45–60 minutes.<br><br>
+      <strong>💡 Friends' tip:</strong> On your way there or back, drive the scenic <em>north/west side of the island</em> — the road along the rugged northern coastline is breathtaking. Then loop back through Ka'anapali.
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-label">Afternoon — Dragon's Teeth Trail (Kapalua)</div>
+    <div class="activity">
+      <strong>Dragon's Teeth Trail</strong> <span class="tag free">Free</span> <em style="font-size:0.85em; color:#888;">~15 min north of Ka'anapali in Kapalua</em><br>
+      Mellow walk through a magical labyrinth of Ironwood trees — your friends' kids love running through it. Continue out to the jagged lava formations (the "dragon's teeth") on the cliff's edge, and depending on the swell, catch a blowhole in action. 20–30 minutes each way. Easy for all ages. <strong>Wrap this up by 3 PM so everyone has time to shower and get ready.</strong>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-label">⚠️ Skip the 13 Crossings Today</div>
+    <div class="activity">
+      13 Crossings involves wet shoes and muddy feet — not ideal on photo day. Save it for Tuesday or another open window.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Evening — 📸 Family Photo Session</div>
+    <div class="activity">
+      <strong>Family Photos with Photographer!</strong><br>
+      Golden hour in Maui in March is approximately <strong>5:45–7:00 PM</strong>. The light is warm, soft, and magical — perfect for beach portraits. Coordinate with your photographer on the exact location and timing. Ka'anapali Beach, Kapalua Bay, and DT Flemings are all stunning options. Make sure everyone has coordinating outfits planned out the night before (speaking from experience — nobody wants to be arguing about shirts at 5 PM in paradise).
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">After Photos — Dinner</div>
+    <div class="activity">
+      You'll be dressed nicely and riding the high of a beautiful evening — capitalize on it.<br><br>
+      <strong>🌅 The Plantation House</strong> — Overlooking Kapalua golf course with jaw-dropping sunset views. One of the most scenic dinner spots on the island. <span class="tag food">Friends' Pick</span><br>
+      — OR —<br>
+      <strong>🍕 Taverna</strong> — Beautiful restaurant on Kapalua Golf Course, more casual but still gorgeous. Pizza, fresh fish, pasta. <span class="tag food">Friends' Pick</span>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 7 -->
+<div class="day-card whales">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 7 — Whale Watching + Beach Day</div>
+      <div class="day-date">Tuesday, March 10</div>
+    </div>
+    <div class="day-theme" style="background:#2980b9;">🐳 Whales + Beach</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Morning (2–3 hours)</div>
+    <div class="activity">
+      <strong>Whale Watching Tour</strong> <span class="tag paid">~$60–100/adult, kids often half price</span> <em style="font-size:0.85em; color:#888;">Launches from Ka'anapali Beach — no drive needed</em><br>
+      March is <em>peak humpback whale season</em> — nearly 1,000 whales in Hawaiian waters. This is arguably the single most memorable thing you can do with the kids in March, and it's cheaper than the Molokini tour.<br><br>
+      <strong>Best option for your group:</strong> <a href="https://mauiwhaleadventures.com" target="_blank">Maui Whale Adventures</a> — launches directly from Ka'anapali Beach (no harbor drive), small group, guaranteed sightings. Kids WILL lose their minds when a 40-ton whale breaches 30 feet from the boat.<br><br>
+      <strong>Alternative:</strong> <a href="https://pacwhale.com" target="_blank">PacWhale Eco-Adventures</a> — research-backed, educational naturalists onboard.
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-label">Late Morning</div>
+    <div class="activity">
+      <strong>🥣 Baya Bowls</strong> — In the DT Flemings parking lot. Your friends call it "the best açaí bowls ever." Pop over for post-whale-watch fuel. <span class="tag food">Friends' Obsession</span>
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Afternoon — Beach Choice</div>
+    <div class="activity">
+      <strong>Option A: DT Flemings Beach</strong> <em style="font-size:0.85em; color:#888;">~15 min north</em> — Gorgeous wide beach, fun body surfing for the older kids. Check swell conditions first — can be rougher in winter. <span class="tag free">Free</span><br><br>
+      <strong>Option B: Kapalua Bay</strong> — Naturally protected by reef headlands, the calmest and safest winter snorkeling in West Maui. Exceptional visibility. Perfect if you want one more snorkel day with the kids. <span class="tag free">Free</span><br><br>
+      <strong>Option C: Ka'anapali Beach + Black Rock</strong> — Snorkeling around Black Rock is excellent, plus it's where Sheraton torch lighting happens at sunset — a free nightly spectacle.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Evening — Special Dinner Night</div>
+    <div class="activity">
+      <strong>🍕 Sale Pepe</strong> — Italian restaurant that rebuilt after the Lahaina fires. Imports flour and mozzarella from Italy. Your friends call it their all-time favorite. <strong>Make a reservation</strong>. <span class="tag food">Friends' #1 Restaurant</span><br>
+      — OR —<br>
+      <strong>🍣 Sansei</strong> — Best sushi on West Maui. Kapalua location. Reservation recommended. <span class="tag food">Friends' Pick</span><br>
+      — OR —<br>
+      <strong>🍰 Leilani's on the Beach</strong> — Nice dinner right on the sand at Whalers Village, Ka'anapali. <em>You must get the Hula Pie.</em> It's mandatory. No exceptions. <span class="tag food">Friends' Pick</span>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 8 -->
+<div class="day-card lastday">
+  <div class="day-header">
+    <div>
+      <div class="day-title">Day 8 — Last Day + Late Night Flight</div>
+      <div class="day-date">Wednesday, March 11</div>
+    </div>
+    <div class="day-theme" style="background:#c0392b;">✈️ Depart 10:42 PM</div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Morning</div>
+    <div class="activity">
+      <strong>🥐 Papis Ohana Cinnamon Rolls</strong> (open today — not Sundays/Wednesdays) — One last morning ritual. Line up early. <span class="tag food">Friends' Pick</span><br><br>
+      <strong>Belle Surf Cafe</strong> — Yummy brunch spot if you want a sit-down option. <span class="tag food">Friends' Pick</span><br><br>
+      <strong>Pau Bakery</strong> — Fresh sourdough, baked goods, pavlova. A newer spot your friends are obsessed with. Great for picking up treats.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Afternoon — Final Beach Time</div>
+    <div class="activity">
+      Spend your last afternoon at Ka'anapali or Kapalua — whichever beach the kids loved most. Let them play. Don't rush it. Soak it in. This is the one you'll all keep talking about on the flight home.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Late Afternoon — Pack + Lahaina Run</div>
+    <div class="activity">
+      <strong>🥧 Leoda's Bakery</strong> — Between Ka'anapali and the airport on Hwy 30. Famous meat and sweet pies that your friends say you MUST try before flying home. Grab some for the airport. <span class="tag food">Friends' Non-Negotiable</span><br><br>
+      <strong>🍦 Island Cream Co</strong> — Friends' other favorite ice cream spot. One last scoop before you go.
+    </div>
+  </div>
+  
+  <div class="time-block">
+    <div class="time-label">Flight</div>
+    <div class="activity">
+      Depart OGG 10:42 PM → LAX → SLC (arrives ~11:34 AM on March 12).<br>
+      Head to the airport 2.5–3 hours early with this crew — about 7:30–8 PM departure from your rental. Dinner at the airport or grab Leoda's pies to eat at the gate.
+    </div>
+  </div>
+</div>
+
+<!-- LUAU BREAKDOWN -->
+<div class="section-title">🌺 Luau Decision Guide</div>
+<div class="luau-box">
+  <h3>Pick Your Luau (Book This Week!) — Priced for Your Family: 2 Adults + Kids 9, 7, 4 &amp; 18mo</h3>
+  <p style="font-size:0.85em; color:#666; margin-bottom:14px;">Pricing verified from current booking sites. Most luaus: adults = 13+, children = 6–12, under 5/6 = free. Tax/fees add ~10–12%.</p>
+  
+  <div class="luau-option">
+    <h4>🥇 Option A — Royal Lahaina "Myths of Maui" Luau <span style="font-size:0.85em; color:#27ae60;">(Best Value + Most Kid-Friendly)</span></h4>
+    <p><strong>Location:</strong> Royal Lahaina Resort, Ka'anapali — 5 minutes from where you're staying</p>
+    <p style="font-size:0.88em; color:#555; margin:6px 0;">Verified from <a href="https://www.royallahaina.com/myths-of-maui-luau/" target="_blank">royallahaina.com</a> &amp; <a href="https://www.bestofmauiactivities.com/book/royal-lahaina-myths-of-maui-luau/" target="_blank">BestOfMauiActivities</a></p>
+    <table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:8px 0;">
+      <tr style="background:#f0f7f5;"><th style="text-align:left; padding:5px 8px;">Guest</th><th style="padding:5px 8px;">Rate</th><th style="padding:5px 8px;">Qty</th><th style="padding:5px 8px;">Subtotal</th></tr>
+      <tr><td style="padding:5px 8px;">Adults (13+)</td><td style="padding:5px 8px;">$185</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$370</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">Kids 9, 7 (ages 6–12)</td><td style="padding:5px 8px;">$115</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$230</td></tr>
+      <tr><td style="padding:5px 8px;">Age 4 (under 5 — 1 free per adult)</td><td style="padding:5px 8px; color:#27ae60;">FREE</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#27ae60;">$0</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">18 months (under 5 — 1 free per adult)</td><td style="padding:5px 8px; color:#27ae60;">FREE</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#27ae60;">$0</td></tr>
+      <tr style="font-weight:bold; background:#e8f8f1;"><td style="padding:5px 8px;">Before tax/fees</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">$600</td></tr>
+      <tr style="font-weight:bold;"><td style="padding:5px 8px;">Estimated total w/ tax &amp; fees (~10%)</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">~$660</td></tr>
+    </table>
+    <p style="font-size:0.9em; line-height:1.6;">The only luau on Maui with a <strong>dedicated kids' buffet</strong> (chicken nuggets, mac and cheese — picky eater approved and beloved). Hawaiian dinner buffet + open bar for adults. Show includes dances from Hawaii, Tahiti, Samoa, and New Zealand with a fire-knife finale. Multiple reviewers on TripAdvisor and family travel blogs consistently rate it as the most relaxed and kid-accommodating luau in Ka'anapali. Also the closest to your rental — no driving exhausted kids 35 minutes home.</p>
+    <p class="verdict">✅ Best pick for budget and kid-logistics. Both the 4-year-old AND the baby are free — that alone saves you ~$340 vs. Grand Wailea before tax.</p>
+  </div>
+
+  <div class="luau-option">
+    <h4>🔥 Option B — Drums of the Pacific (Hyatt Regency Ka'anapali) <span style="font-size:0.85em; color:#e67e22;">(Best Entertainment for the Kids)</span></h4>
+    <p><strong>Location:</strong> Hyatt Regency, Ka'anapali — literally in your neighborhood</p>
+    <p style="font-size:0.88em; color:#555; margin:6px 0;">Verified from <a href="https://drumsofthepacificmaui.com/maui-luau-reservations/" target="_blank">drumsofthepacificmaui.com</a> &amp; <a href="https://www.auntiesnorkel.com/maui-shop/maui-island-activities-tours/hyatt-regency-drums-of-the-pacific-luau-tickets/" target="_blank">Auntie Snorkel</a></p>
+    <p style="font-size:0.85em; color:#27ae60; font-weight:bold; margin-bottom:6px;">✅ CONFIRMED PRICING — March 6, 2026 booking verified.</p>
+    <table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:8px 0;">
+      <tr style="background:#f0f7f5;"><th style="text-align:left; padding:5px 8px;">Guest</th><th style="padding:5px 8px;">Rate</th><th style="padding:5px 8px;">Qty</th><th style="padding:5px 8px;">Subtotal</th></tr>
+      <tr><td style="padding:5px 8px;">Adults (13+)</td><td style="padding:5px 8px;">$201.60</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$403.20</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">Kids 9 &amp; 7 (ages 4–12)</td><td style="padding:5px 8px;">$100.80</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$201.60</td></tr>
+      <tr><td style="padding:5px 8px; color:#c0392b;"><strong>Age 4 (ages 4–12 — pays at Drums!)</strong></td><td style="padding:5px 8px; color:#c0392b;">$100.80</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#c0392b;">$100.80</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">18 months (under 4 — free)</td><td style="padding:5px 8px; color:#27ae60;">FREE</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#27ae60;">$0</td></tr>
+      <tr style="font-weight:bold; background:#fff3e0;"><td style="padding:5px 8px;">Subtotal</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">$705.60</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">Tax</td><td></td><td></td><td style="padding:5px 8px;">$33.25</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">Fees</td><td></td><td></td><td style="padding:5px 8px;">$42.34</td></tr>
+      <tr style="font-weight:bold; background:#fff3e0;"><td style="padding:5px 8px;">CONFIRMED TOTAL</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">$781.19</td></tr>
+    </table>
+    <p style="font-size:0.9em; line-height:1.6;">Maui's longest-running luau. Highly reviewed for being <strong>the most energetic and entertaining</strong> — kids are often invited on stage during the show. The three-person fire-knife grand finale is repeatedly called out in reviews as one of the best on the island. Polynesian buffet + open bar. Free self-parking with validation. Multiple family travel reviewers on TripAdvisor and Hawaii travel blogs call this the best luau for kids who love action.</p>
+    <p class="verdict">✅ Best pick for pure entertainment value. Your 9 and 7-year-olds will be talking about the fire knives for years. Similar price to Royal Lahaina — confirm March rates directly before booking.</p>
+  </div>
+
+  <div class="luau-option">
+    <h4>🌊 Option C — Maui Nui Luau at Sheraton Maui (Black Rock)</h4>
+    <p><strong>Location:</strong> Sheraton Maui Resort, Ka'anapali — on the beach, walking distance from Drums of the Pacific</p>
+    <p style="font-size:0.88em; color:#555; margin:6px 0;">Verified from <a href="https://www.viator.com/tours/Lahaina/Kaanapali-Sunset-Luau-in-Maui/d51005-2784BLACK" target="_blank">Viator</a> &amp; <a href="https://thebettervacation.com/maui-nui-luau/" target="_blank">TheBetterVacation</a></p>
+    <table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:8px 0;">
+      <tr style="background:#f0f7f5;"><th style="text-align:left; padding:5px 8px;">Guest</th><th style="padding:5px 8px;">2026 Rate</th><th style="padding:5px 8px;">Qty</th><th style="padding:5px 8px;">Subtotal</th></tr>
+      <tr><td style="padding:5px 8px;">Adults (13+)</td><td style="padding:5px 8px;">$218</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$436</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">Kids 9, 7 (ages 6–12)</td><td style="padding:5px 8px;">$120</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$240</td></tr>
+      <tr><td style="padding:5px 8px;">Age 4 (ages 5 &amp; under)</td><td style="padding:5px 8px; color:#27ae60;">FREE</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#27ae60;">$0</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">18 months (ages 5 &amp; under)</td><td style="padding:5px 8px; color:#27ae60;">FREE</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#27ae60;">$0</td></tr>
+      <tr style="font-weight:bold; background:#e8f0fe;"><td style="padding:5px 8px;">Before tax/fees</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">$676</td></tr>
+      <tr style="font-weight:bold;"><td style="padding:5px 8px;">Estimated total w/ tax &amp; fees (~10%)</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">~$744</td></tr>
+    </table>
+    <p style="font-size:0.9em; line-height:1.6;">Consistently praised for its <strong>incredible setting</strong> — every review mentions the iconic Black Rock backdrop and the nightly cliff-diving torch ceremony at sunset. All-you-can-eat Hawaiian buffet, hula dancing, Samoan fire knife show, open bar. Reviewers consistently call out the beautiful oceanfront venue as the standout element. Solid reviews across TripAdvisor and multiple Hawaii travel sites. No events on Tuesdays or Thursdays.</p>
+    <p class="verdict">✅ Best setting/atmosphere in Ka'anapali. A step up from the other two in terms of venue ambiance. Good middle-ground option.</p>
+  </div>
+
+  <div class="luau-option">
+    <h4>💎 Option D — Grand Wailea Lūʻau (Friends' Recommendation) <span style="font-size:0.85em; color:#8e44ad;">(Premium Pick)</span></h4>
+    <p><strong>Location:</strong> Grand Wailea Resort, Wailea — South Maui (~35 min drive from Ka'anapali)</p>
+    <p style="font-size:0.88em; color:#555; margin:6px 0;">Verified from <a href="https://www.auntiesnorkel.com/maui-shop/maui-island-activities-tours/grand-wailea-luau-honuaula-tickets/" target="_blank">Auntie Snorkel</a> &amp; <a href="https://www.bestofmauiactivities.com/book/grand-wailea-luau-standard-seating/" target="_blank">BestOfMauiActivities</a></p>
+    <table style="width:100%; border-collapse:collapse; font-size:0.88em; margin:8px 0;">
+      <tr style="background:#f0f7f5;"><th style="text-align:left; padding:5px 8px;">Guest</th><th style="padding:5px 8px;">Rate</th><th style="padding:5px 8px;">Qty</th><th style="padding:5px 8px;">Subtotal</th></tr>
+      <tr><td style="padding:5px 8px;">Adults (13+)</td><td style="padding:5px 8px;">$275</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$550</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">Kids 9, 7 (ages 3–12)</td><td style="padding:5px 8px;">$170</td><td style="padding:5px 8px;">2</td><td style="padding:5px 8px;">$340</td></tr>
+      <tr><td style="padding:5px 8px; color:#c0392b;"><strong>Age 4 (ages 3–12 — pays here!)</strong></td><td style="padding:5px 8px; color:#c0392b;">$170</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#c0392b;">$170</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:5px 8px;">18 months (ages 2 &amp; under)</td><td style="padding:5px 8px; color:#27ae60;">FREE</td><td style="padding:5px 8px;">1</td><td style="padding:5px 8px; color:#27ae60;">$0</td></tr>
+      <tr style="font-weight:bold; background:#f9f0ff;"><td style="padding:5px 8px;">Before tax/fees</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">$1,060</td></tr>
+      <tr style="font-weight:bold;"><td style="padding:5px 8px;">Estimated total w/ tax &amp; fees (~10%)</td><td></td><td></td><td style="padding:5px 8px; color:#c0392b;">~$1,166</td></tr>
+    </table>
+    <p style="font-size:0.9em; line-height:1.6; margin-top:6px;">
+      <strong>⚠️ Important difference:</strong> Grand Wailea charges for ages 3–12 (not 6–12 like the others), so your 4-year-old is a paid ticket at $170.<br><br>
+      Named <strong>USA Today's #1 Best Luau in Hawaii 2025</strong>. Private table service (no buffet scramble), oceanfront lawn at Wailea, Cirque du Soleil–inspired performance, and table service dinner. Overwhelmingly positive reviews on TripAdvisor — most call it "worth every penny." Some critics note the plated courses take a long time between dances. The Murray family connection your friends mentioned is a genuinely special touch. However, there are some mixed reviews calling the food average and the show "not quite worth the price." Most glowing reviews come from first-timers who had zero expectations — which is exactly your situation.<br><br>
+      <strong>The honest budget math:</strong> Grand Wailea is $460 more than the Royal Lahaina for your family (before tax — ~$506 after). That's a nice dinner, two whale watching tickets, or a solid chunk of your grocery budget for the week.
+    </p>
+    <p class="verdict">✅ Worth considering <em>specifically</em> because of the Murray family connection your friends mentioned — that personal touch may make it genuinely different from the standard experience. But on pure value and convenience, options A or B win.</p>
+  </div>
+</div>
+
+<!-- BEST EATS REFERENCE -->
+<div class="eats-section">
+  <h3>🍽️ All the Best Eats (Friends' Full List)</h3>
+  <p style="font-size:0.8em; color:#888; margin-bottom:12px;"><span style="color:#27ae60; font-weight:bold;">$</span> = under $15/person &nbsp;|&nbsp; <span style="color:#27ae60; font-weight:bold;">$$</span> = $15–35/person &nbsp;|&nbsp; <span style="color:#e67e22; font-weight:bold;">$$$</span> = $35–60/person &nbsp;|&nbsp; <span style="color:#c0392b; font-weight:bold;">$$$$</span> = $60+/person</p>
+  
+  <div class="eats-grid">
+    <div class="eat-item"><strong>Star Noodle</strong> <span style="color:#27ae60; font-weight:bold;">$$</span> — Asian family-style, Lahaina waterfront. Excellent.</div>
+    <div class="eat-item"><strong>Sale Pepe</strong> <span style="color:#c0392b; font-weight:bold;">$$$$</span> — Best Italian on Maui. $100+/person. Special occasion only — but worth every penny. Make a rez.</div>
+    <div class="eat-item"><strong>The Plantation House</strong> <span style="color:#e67e22; font-weight:bold;">$$$</span> — Views over Kapalua golf course. Nice dinner.</div>
+    <div class="eat-item"><strong>Pau Bakery</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Sourdough, baked goods, pavlova. New and excellent.</div>
+    <div class="eat-item"><strong>Baya Bowls</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Açaí bowls at DT Flemings parking lot. The best.</div>
+    <div class="eat-item"><strong>Belle Surf Cafe</strong> <span style="color:#27ae60; font-weight:bold;">$$</span> — Brunch spot. Solid.</div>
+    <div class="eat-item"><strong>Papis Ohana</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Cinnamon rolls. Open 7 AM–2 PM. Closed Sun &amp; Wed.</div>
+    <div class="eat-item"><strong>Leilani's on the Beach</strong> <span style="color:#27ae60; font-weight:bold;">$$</span> — Whalers Village. Dinner + Hula Pie (mandatory).</div>
+    <div class="eat-item"><strong>Honokawai Food Trucks</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Dinner only. Thai truck = friends' fav.</div>
+    <div class="eat-item"><strong>Mala Tavern</strong> <span style="color:#e67e22; font-weight:bold;">$$$</span> — Pricier seafood, right on the water. Special occasion.</div>
+    <div class="eat-item"><strong>Aloha Mixed Plate</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Casual, waterfront, local Hawaiian food. Great for kids.</div>
+    <div class="eat-item"><strong>Sansei</strong> <span style="color:#e67e22; font-weight:bold;">$$$</span> — Best sushi on West Maui. Kapalua. Reservation needed.</div>
+    <div class="eat-item"><strong>Sergio's</strong> <span style="color:#27ae60; font-weight:bold;">$$</span> — Friends' date night Mexican. Honokawai.</div>
+    <div class="eat-item"><strong>Leoda's Bakery</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Meat &amp; sweet pies. Non-negotiable on the way to airport.</div>
+    <div class="eat-item"><strong>Island Cream Co</strong> <span style="color:#27ae60; font-weight:bold;">$</span> — Friends' go-to ice cream.</div>
+    <div class="eat-item"><strong>Taverna</strong> <span style="color:#27ae60; font-weight:bold;">$$</span> — Pizza, pasta, fish. Kapalua Golf Course. Moderate for the area, beautiful setting.</div>
+  </div>
+</div>
+
+<!-- QUICK TIPS BOX -->
+<div class="alert-box green" style="margin-top:22px;">
+  <h3>🤙 General Tips for Your Trip</h3>
+  <ul>
+    <li><strong>Sunscreen:</strong> Pack reef-safe sunscreen from home — it's significantly cheaper than buying it in Maui.</li>
+    <li><strong>Snorkel gear:</strong> If you're renting, check <a href="https://bossfrog.com" target="_blank">Boss Frog's</a> or Snorkel Bob's for weekly rentals — much cheaper than paying per-day at tour operators.</li>
+    <li><strong>Baby carrier:</strong> Non-negotiable for the 18-month-old on hikes. A sturdy hiking carrier (Osprey, Deuter) makes Iao Valley and Dragon's Teeth easy.</li>
+    <li><strong>Costco run on arrival:</strong> Snacks, water, sunscreen, bananas, granola bars — fueling 5 kids in Hawaii gets expensive fast at convenience stores.</li>
+    <li><strong>Check swell daily:</strong> <a href="https://safebeachday.com/county/maui/" target="_blank">safebeachday.com</a> — takes 30 seconds and could save a bad beach day.</li>
+    <li><strong>Whale watching from shore:</strong> Launiupoko and Ka'anapali are both excellent free viewing spots in March — bring binoculars if you have them.</li>
+    <li><strong>The 18-month-old and luau:</strong> Most luaus under-5 is free. Bring snacks and a favorite toy — the show runs 2–3 hours and nap math will not be in your favor.</li>
+    <li><strong>Car sickness:</strong> Road to Hana is 600+ curves. Give Dramamine the night before to any kids who struggle with winding roads.</li>
+    <li><strong>Family photos:</strong> Russell — once you confirm with photographer on Sunday, slot them into any morning that's still open (Thursday, Monday, or Tuesday morning have the best beach light).</li>
+  </ul>
+</div>
+
+<div class="footer">
+  Maui trip planning for the Steed Family — March 4–11, 2026 🌺<br>
+  First time in Hawaii? You picked the right island. Enjoy every second of it.
+</div>
+
+</body>
+</html>
